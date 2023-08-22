@@ -16,7 +16,7 @@ function Main() {
       reader.onload = async (event) => {
         if (event.target && event.target.result) {
           const base64Data = event.target.result.split(',')[1];
-          const response = await axios.post('http://localhost:8000/api/upload', { imageData: base64Data });
+          const response = await axios.post('http://localhost:8080/api/upload', { imageData: base64Data });
           const newSimilarCars = response.data.similarCars || [];
           setSimilarCars(newSimilarCars);
         }
