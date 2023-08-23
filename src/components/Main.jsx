@@ -45,29 +45,26 @@ function Main() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center">
-      <div className="bg-white rounded-lg p-8 shadow-md w-full max-w-md">
-        <h1 className="text-2xl font-bold mb-4">Car Finder</h1>
-        <Dropzone onDrop={acceptedFiles => setSelectedFile(acceptedFiles[0])}>
-          {({ getRootProps, getInputProps }) => (
-            <div className="border-dashed border-2 border-gray-300 p-4 rounded-lg mb-4" {...getRootProps()}>
-              <input {...getInputProps()} />
-              {selectedFile ? (
-                <p>Selected File: {selectedFile.name}</p>
-              ) : (
-                <p>Click to upload an image</p>
-              )}
-            </div>
-          )}
-        </Dropzone>
-        <button
-          className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
-          onClick={handleFileUpload}
-        >
-          Find Similar Cars
-        </button>
-        <div className="mt-4">
-          {similarCars.length > 0 && renderSimilarCars()}
+    <div className="bg-lightgrey flex justify-center p-12 mb-2">
+      <div>
+        <div className="bg-white rounded-lg p-8 shadow-md w-full max-w-md">
+          <h1 className="flex justify-center text-3xl font-bold mb-8">Find-A-Car</h1>
+          <h1 className="text-lg font-regular mb-4">Use our AI (Artificial Intelligence) model to find your next car.</h1>
+          <h1 className="text-lg font-regular mb-4">Upload a picture of the car you want below and then click 'Find My Car'.</h1>
+          <Dropzone onDrop={(acceptedFiles, fileRejections, event) => setSelectedFile(acceptedFiles[0])}>
+            {({ getRootProps, getInputProps }) => (
+              <div className="border-dashed border-2 border-turnersgrey p-10 rounded-lg mt-10" {...getRootProps()}>
+                <input {...getInputProps()} />
+                {selectedFile ? <p className="flex justify-center">Selected File: {selectedFile.name}</p> : <p className="flex justify-center">Click to upload an image</p>}
+              </div>
+            )}
+          </Dropzone>
+          <div className="flex justify-center mt-10">
+            <button className="bg-turnersblue text-white font-semibold py-2 px-4 rounded hover:bg-turnersred transition-colors duration-700" onClick={handleFileUpload}>
+              Find My New Car
+            </button>
+          </div>
+          <div className="mt-4">{similarCars.length > 0 && renderSimilarCars()}</div>
         </div>
       </div>
     </div>
