@@ -1,30 +1,34 @@
-import React, { useState } from 'react';
-import axios from 'axios';
-import Dropzone from 'react-dropzone';
+import React, { useState } from "react";
+import axios from "axios";
+import Dropzone from "react-dropzone";
 
 function Main() {
-  const [selectedFile, setSelectedFile] = useState(null);
-  const [similarCars, setSimilarCars] = useState([]);
+  const [selectedFile, setSelectedFile] = useState<File | null>(null);
+  const [similarCars, setSimilarCars] = useState<string[]>([]);
 
   const handleFileUpload = async () => {
     if (!selectedFile) {
       return;
     }
-  
+
     try {
       const reader = new FileReader();
       reader.onload = async (event) => {
         if (event.target && event.target.result) {
-          const base64Data = event.target.result.split(',')[1];
-          const response = await axios.post('http://localhost:8080/api/upload', { imageData: base64Data });
+          const base64Data = (event.target.result as string).split(",")[1];
+          const response = await axios.post("http://localhost:8080/api/upload", { imageData: base64Data });
           const newSimilarCars = response.data.similarCars || [];
           setSimilarCars(newSimilarCars);
         }
       };
       reader.readAsDataURL(selectedFile);
     } catch (error) {
-      console.error('Error uploading image:', error);
+      console.error("Error uploading image:", error);
     }
+  };
+
+  const handleDrop = (acceptedFiles: File[]) => {
+    setSelectedFile(acceptedFiles[0]);
   };
 
   const renderSimilarCars = () => {
@@ -51,7 +55,7 @@ function Main() {
           <h1 className="flex justify-center text-3xl font-bold mb-8">Find-A-Car</h1>
           <h1 className="text-lg font-regular mb-4">Use our AI (Artificial Intelligence) model to find your next car.</h1>
           <h1 className="text-lg font-regular mb-4">Upload a picture of the car you want below and then click 'Find My Car'.</h1>
-          <Dropzone onDrop={(acceptedFiles, fileRejections, event) => setSelectedFile(acceptedFiles[0])}>
+          <Dropzone onDrop={handleDrop}>
             {({ getRootProps, getInputProps }) => (
               <div className="border-dashed border-2 border-turnersgrey p-10 rounded-lg mt-10" {...getRootProps()}>
                 <input {...getInputProps()} />
