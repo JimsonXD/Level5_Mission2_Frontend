@@ -14,7 +14,7 @@ function App() {
       <Navbar />
       <Carousel />
       {/* <Main /> */}
-      {/* <TestFinal /> */}
+      <TestFinal />
 
 <TestFinalExpress />
 

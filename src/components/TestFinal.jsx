@@ -24,7 +24,7 @@ const TestFinal = () => {
 
     try {
       const predictionResponse = await axios.post(
-        'https://imagerecognitionvision-prediction.cognitiveservices.azure.com/customvision/v3.0/Prediction/c61d4975-cd46-46f0-8cca-239762f32294/classify/iterations/Iteration2/image',
+        'https://imagerecognitionvision-prediction.cognitiveservices.azure.com/customvision/v3.0/Prediction/c61d4975-cd46-46f0-8cca-239762f32294/classify/iterations/Iteration3/image',
         formData,
         {
           headers: {
