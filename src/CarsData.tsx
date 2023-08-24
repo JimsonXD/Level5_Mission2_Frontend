@@ -6,6 +6,7 @@ export const cars = [
     make: "Toyota",
     model: "Camry",
     year: "2012",
+    color: "white",
   },
   {
     imageUrl: "/cars/car_types/sedan/accord.jpeg",
@@ -13,6 +14,7 @@ export const cars = [
     make: "Honda",
     model: "Accord",
     year: "2010",
+    color: "white",
   },
   {
     imageUrl: "/cars/car_types/sedan/corolla.jpeg",
@@ -20,6 +22,7 @@ export const cars = [
     make: "Toyota",
     model: "Corolla",
     year: "2002",
+    color: "red",
   },
   {
     imageUrl: "/cars/car_types/sedan/fusion.jpeg",
@@ -27,6 +30,7 @@ export const cars = [
     make: "Ford",
     model: "Fusion",
     year: "2011",
+    color: "red",
   },
   {
     imageUrl: "/cars/car_types/sedan/sentra.jpeg",
@@ -34,6 +38,7 @@ export const cars = [
     make: "Nissan",
     model: "Sentra",
     year: "2022",
+    color: "white",
   },
   {
     imageUrl: "/cars/car_types/sedan/cruze.jpeg",
@@ -41,6 +46,7 @@ export const cars = [
     make: "Chevrolet",
     model: "Cruze",
     year: "2015",
+    color: "silver",
   },
   // Hatchbacks
   {
@@ -49,6 +55,7 @@ export const cars = [
     make: "Volkswagen",
     model: "Golf",
     year: "2006",
+    color: "white",
   },
   {
     imageUrl: "/cars/car_types/hatchback/mazda3.jpeg",
@@ -56,6 +63,7 @@ export const cars = [
     make: "Mazda",
     model: "Mazda3",
     year: "2010",
+    color: "blue",
   },
   {
     imageUrl: "/cars/car_types/hatchback/focus.jpeg",
@@ -63,6 +71,7 @@ export const cars = [
     make: "Ford",
     model: "Focus",
     year: "2012",
+    color: "blue",
   },
   {
     imageUrl: "/cars/car_types/hatchback/yaris.jpeg",
@@ -70,6 +79,7 @@ export const cars = [
     make: "Toyota",
     model: "Yaris",
     year: "2021",
+    color: "green",
   },
   {
     imageUrl: "/cars/car_types/hatchback/polo.jpeg",
@@ -77,6 +87,7 @@ export const cars = [
     make: "Volkswagen",
     model: "Polo",
     year: "2017",
+    color: "pink",
   },
   {
     imageUrl: "/cars/car_types/hatchback/fiesta.jpeg",
@@ -84,6 +95,7 @@ export const cars = [
     make: "Ford",
     model: "Fiesta",
     year: "2018",
+    color: "silver",
   },
   // SUVs
   {
@@ -92,6 +104,7 @@ export const cars = [
     make: "Honda",
     model: "CR-V",
     year: "2013",
+    color: "black",
   },
   {
     imageUrl: "cars/car_types/suv/rav4.jpeg",
@@ -99,6 +112,7 @@ export const cars = [
     make: "Toyota",
     model: "Rav4",
     year: "2022",
+    color: "silver",
   },
   {
     imageUrl: "cars/car_types/suv/escape.jpeg",
@@ -106,6 +120,7 @@ export const cars = [
     make: "Ford",
     model: "Escape",
     year: "2000",
+    color: "silver",
   },
   {
     imageUrl: "cars/car_types/suv/tiguan.jpeg",
@@ -113,6 +128,7 @@ export const cars = [
     make: "Volkswagen",
     model: "Tiguan",
     year: "2016",
+    color: "white",
   },
   {
     imageUrl: "cars/car_types/suv/qashqai.jpeg",
@@ -120,6 +136,7 @@ export const cars = [
     make: "Nissan",
     model: "Qashqai",
     year: "2009",
+    color: "silver",
   },
   {
     imageUrl: "cars/car_types/suv/tucson.jpeg",
@@ -127,6 +144,7 @@ export const cars = [
     make: "Hyundai",
     model: "Tucson",
     year: "2011",
+    color: "blue",
   },
   // Vans
   {
@@ -135,6 +153,7 @@ export const cars = [
     make: "Toyota",
     model: "Sienna",
     year: "2020",
+    color: "silver",
   },
   {
     imageUrl: "/cars/car_types/van/odyssey.jpeg",
@@ -142,6 +161,7 @@ export const cars = [
     make: "Honda",
     model: "Odyssey",
     year: "2008",
+    color: "green",
   },
   {
     imageUrl: "/cars/car_types/van/transit.jpeg",
@@ -149,6 +169,7 @@ export const cars = [
     make: "Ford",
     model: "Transit",
     year: "2010",
+    color: "black",
   },
   {
     imageUrl: "/cars/car_types/van/caravan.jpeg",
@@ -156,6 +177,7 @@ export const cars = [
     make: "Dodge",
     model: "Caravan",
     year: "2014",
+    color: "yellow",
   },
   {
     imageUrl: "/cars/car_types/van/nv200.jpeg",
@@ -163,6 +185,7 @@ export const cars = [
     make: "Nissan",
     model: "NV200",
     year: "2023",
+    color: "pink",
   },
   {
     imageUrl: "/cars/car_types/van/promaster.jpeg",
@@ -170,6 +193,7 @@ export const cars = [
     make: "Ram",
     model: "ProMaster",
     year: "2022",
+    color: "green",
   },
   // Utes
   {
@@ -178,6 +202,7 @@ export const cars = [
     make: "Toyota",
     model: "Hilux",
     year: "2004",
+    color: "white",
   },
   {
     imageUrl: "/cars/car_types/ute/ranger.jpeg",
@@ -185,6 +210,7 @@ export const cars = [
     make: "Ford",
     model: "Ranger",
     year: "2012",
+    color: "black",
   },
   {
     imageUrl: "/cars/car_types/ute/navara.jpeg",
@@ -192,6 +218,7 @@ export const cars = [
     make: "Nissan",
     model: "Navara",
     year: "2007",
+    color: "green",
   },
   {
     imageUrl: "/cars/car_types/ute/triton.jpeg",
@@ -199,6 +226,7 @@ export const cars = [
     make: "Mitsubishi",
     model: "Triton",
     year: "2019",
+    color: "pink",
   },
   {
     imageUrl: "/cars/car_types/ute/d-max.jpeg",
@@ -206,6 +234,7 @@ export const cars = [
     make: "Isuzu",
     model: "D-Max",
     year: "2018",
+    color: "red",
   },
   {
     imageUrl: "/cars/car_types/ute/bt-50.jpeg",
@@ -213,5 +242,6 @@ export const cars = [
     make: "Mazda",
     model: "BT-50",
     year: "2021",
+    color: "yellow",
   },
 ];

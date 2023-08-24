@@ -25,13 +25,13 @@ const Main = () => {
 
     try {
       const predictionResponse = await axios.post(
-        "https://imagerecognitionvision-prediction.cognitiveservices.azure.com/customvision/v3.0/Prediction/c61d4975-cd46-46f0-8cca-239762f32294/classify/iterations/Iteration3/image",
+        "https://carimaging-prediction.cognitiveservices.azure.com/customvision/v3.0/Prediction/c36bf7d8-ce8c-4f6c-8369-3662621c299b/detect/iterations/Iteration1/image",
 
         formData,
 
         {
           headers: {
-            "Prediction-Key": "1e8b68737a164c62862ff4f63ab5b180",
+            "Prediction-Key": "6887eb37ac004947a80cfa2cac0f7768",
           },
         }
       );
@@ -45,7 +45,7 @@ const Main = () => {
 
         setPredictedCarType(predictedType);
 
-        const filteredCarsByType = cars.filter((car) => car.type.toLowerCase() === predictedType);
+        const filteredCarsByType = cars.filter((car) => car.color.toLowerCase() === predictedType);
 
         setFilteredCars(filteredCarsByType);
       } else {
@@ -63,10 +63,7 @@ const Main = () => {
       <div className="bg-lightgrey flex justify-center p-12 mb-2">
         <div>
           <div className="bg-white rounded-lg p-8 shadow-md w-full max-w-md">
-            <h1 className="flex justify-center text-3xl font-bold mb-8">Find-A-Car</h1>
-            <h1 className="text-lg font-regular mb-4">Use our AI (Artificial Intelligence) model to find your next car.</h1>
-            <h1 className="text-lg font-regular mb-4">Upload a picture of the car you want below and then click 'Find My Car'.</h1>
-
+            <h1 className="flex justify-center text-xl font-bold mb-8">By Colour</h1>
             <div>
               <div>
                 <div className="border-dashed border-2 border-turnersgrey p-10 rounded-lg mt-10">
@@ -84,7 +81,7 @@ const Main = () => {
               <div className="bg-turnersblue">
                 {predictedCarType && (
                   <div className="bg-yellow p-6 shadow-md rounded-lg">
-                    <h2 className="flex justify-center text-white text-xl font-semibold mb-4">You uploaded a {predictedCarType}.</h2>
+                    <h2 className="flex justify-center text-white text-xl font-semibold mb-4">You uploaded a {predictedCarType} vehicle.</h2>
 
                     <h3 className="flex justify-center text-white text-xl font-semibold mb-4">Take your pick!</h3>
 

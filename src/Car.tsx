@@ -6,9 +6,10 @@ interface CarProps {
   type: string;
   make: string;
   year: number;
+  color: string;
 }
 
-const Car: React.FC<CarProps> = ({ imageUrl, model, type, make, year }) => {
+const Car: React.FC<CarProps> = ({ imageUrl, model, type, make, year, color }) => {
   return (
     <div className="bg-white p-4 shadow-md rounded-lg">
       <img src={imageUrl} alt={`${model} - ${year}`} className="w-auto h-auto lg:max-w-lg lg:w-auto mx-auto mb-2" />
