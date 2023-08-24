@@ -4,6 +4,7 @@ import Footer from "./components/Footer";
 import Main from "./components/Main";
 import Navbar from "./components/Navbar";
 import TestFinal from "./components/TestFinal";
+import TestFinalExpress from "./components/TestFinalExpress";
 
 
 function App() {
@@ -13,7 +14,10 @@ function App() {
       <Navbar />
       <Carousel />
       {/* <Main /> */}
-      <TestFinal />
+      {/* <TestFinal /> */}
+
+<TestFinalExpress />
+
       <Footer />
       {/* </Routes> */}
     </div>
