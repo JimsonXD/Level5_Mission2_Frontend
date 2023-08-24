@@ -1,4 +1,3 @@
-// import CarValueCalculator from "./components/CarValueCalculator";
 import React from "react";
 import Carousel from "./components/Carousel";
 import Footer from "./components/Footer";
